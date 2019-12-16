@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,183 +8,226 @@
     <title>Life空間</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link href="aos-master/dist/aos.css" rel="stylesheet">
-    
-<style>
-    /* 至頂按鈕 */
-    #goTop {
-        display: none;
-        position: fixed;
-        border-radius: 50%;
-        right: 20px;
-        bottom: 20px;
-        width: 50px;
-        height: 50px;
-        padding: 4px 0 0 18px;
-        font-size: 25px;
-        background: rgb(253, 174, 137);
-        color: #fff;
-        cursor: pointer;
-        z-index: 1000;
-    }
-    #goTop:hover {
-        background: rgb(253, 162, 119);
-        color: #fff;
-    }
-    
-    .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-    }
 
-    .carousel-fade .carousel-inner .item,
-
-    .carousel-fade .carousel-inner .active.left,
-
-    .carousel-fade .carousel-inner .active.right {
-    opacity: 0;
-    }
-    .carousel-fade .carousel-inner .active,
-
-    .carousel-fade .carousel-inner .next.left,
-
-    .carousel-fade .carousel-inner .prev.right {
-        opacity: 1;
-    }
-    .carousel-fade .carousel-inner .next,
-
-    .carousel-fade .carousel-inner .prev,
-
-    .carousel-fade .carousel-inner .active.left,
-
-    .carousel-fade .carousel-inner .active.right {
-        left: 0;
-        transform: translate3d(0, 0, 0);
-    }
-    .carousel-fade .carousel-control {
-        z-index: 2;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 4rem;
-    }
-    .carousel-caption p {
-        font-weight: 600;
-        font-size: 1.3rem;
-    }
-    .carousel-inner img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .bg-color {
-        background: rgb(253, 241, 236);
-        padding-bottom: 2.5em ;
-    }
-    .title-icon{
-        width: 100px;
-        height: 100px;
-        background: rgb(253, 174, 137);
-    }
-    .btn-custom {
-        color:rgb(253, 174, 137) ;
-        font-weight: 500 ;
-        border-bottom: 2px solid rgb(253, 174, 137);
-    }
-    .btn-custom:hover {
-        color:rgb(253, 143, 92) ;
-        border-bottom: 2px solid rgb(253, 143, 92);
-        text-decoration: none;
-    }
-    .section-counter{
-        color: #fff ;
-        padding: 6em 0;
-    }   
-    .counter-bg {
-        display: block;
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.6);
-    }
-    .counter-num {
-        color: rgba(0, 0, 0, 0.616);
-    }
-    .counter-num strong {
-        font-size: 40px ;
-        font-weight: 700;
-    }
-    .project {
-        padding: 6em 0 ;
-    }
-    .text h3 {
-        font-size: 1.75rem ;
-        color:#fff ;
-        position: absolute ;
-        top:0 ;
-        left: 0;
-        right:0 ;
-        padding: 2em ;
-        text-transform: uppercase;  
-        font-family: Arial, Helvetica, sans-serif ;
-        line-height: 1.5em ;
-        font-weight: 500;  
-    }
-    .blog-entry .bg {
-        display: block;
-        position: relative;
-        width: 266px;
-        height: 275px ;
-    }
-    .meta {
-        display: block;
-        width: 260px;
-        font-size: 12px ;
-    }
-    .meta>div {
-        color: rgb(253, 174, 137) ;
-    }
-    .blog-entry .heading {
-        color: #000 ;
-        font-size: 20px ;
-        line-height: 1.5em ;
-    }
-    footer {
-        background: #000;
-        color: #fff ;
-    }
-    .list-unstyled .email {
-        color: #fff;
-    }
-    .list-unstyled img {
-        width: 40px;
-        margin: 5px;
-    }
-    .list-unstyled img:hover {
-        opacity: .9;
-    }
-    @media screen and (max-width: 991px) {
-        .lg-none{
+    <style>
+        /* 至頂按鈕 */
+        #goTop {
             display: none;
+            position: fixed;
+            border-radius: 50%;
+            right: 20px;
+            bottom: 20px;
+            width: 50px;
+            height: 50px;
+            padding: 4px 0 0 18px;
+            font-size: 25px;
+            background: rgb(253, 174, 137);
+            color: #fff;
+            cursor: pointer;
+            z-index: 1000;
         }
-    }
-    @media screen and (max-width: 768px) {
-        .navbar-collapse .nav-item{
-            text-align: center;
-            padding: 0.5rem 0;
+
+        #goTop:hover {
+            background: rgb(253, 162, 119);
+            color: #fff;
         }
-        .navbar-collapse .nav-link {
-            width: 100%;
+
+        .navFixed {
+            z-index: 20;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #fff;
+            min-width: 100%;
+            transition: opacity .5s ease-out;
         }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .carousel-fade .carousel-inner .item,
+
+        .carousel-fade .carousel-inner .active.left,
+
+        .carousel-fade .carousel-inner .active.right {
+            opacity: 0;
+        }
+
+        .carousel-fade .carousel-inner .active,
+
+        .carousel-fade .carousel-inner .next.left,
+
+        .carousel-fade .carousel-inner .prev.right {
+            opacity: 1;
+        }
+
+        .carousel-fade .carousel-inner .next,
+
+        .carousel-fade .carousel-inner .prev,
+
+        .carousel-fade .carousel-inner .active.left,
+
+        .carousel-fade .carousel-inner .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .carousel-fade .carousel-control {
+            z-index: 2;
+        }
+
+        .carousel-caption h1 {
+            font-size: 4rem;
+        }
+
+        .carousel-caption p {
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
         .carousel-inner img {
-        width: 100%;
-        height: calc(100vh - 56px);
-        object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
-    }
-</style>
+
+        .bg-color {
+            background: rgb(253, 241, 236);
+            padding-bottom: 2.5em;
+        }
+
+        .title-icon {
+            width: 100px;
+            height: 100px;
+            background: rgb(253, 174, 137);
+        }
+
+        .btn-custom {
+            color: rgb(253, 174, 137);
+            font-weight: 500;
+            border-bottom: 2px solid rgb(253, 174, 137);
+        }
+
+        .btn-custom:hover {
+            color: rgb(253, 143, 92);
+            border-bottom: 2px solid rgb(253, 143, 92);
+            text-decoration: none;
+        }
+
+        .section-counter {
+            color: #fff;
+            padding: 6em 0;
+        }
+
+        .counter-bg {
+            display: block;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .counter-num {
+            color: rgba(0, 0, 0, 0.616);
+        }
+
+        .counter-num strong {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .project {
+            padding: 6em 0;
+        }
+        .priject-img {
+            position: relative;
+        }
+        .priject-img .ccc{
+            position: absolute;
+            top: 40%;
+        }
+        .text h3 {
+            font-size: 1.75rem;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2em;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+            font-weight: 500;
+        }
+
+        .blog-entry .bg {
+            display: block;
+            position: relative;
+            width: 266px;
+            height: 275px;
+        }
+
+        .meta {
+            display: block;
+            width: 260px;
+            font-size: 12px;
+        }
+
+        .meta>div {
+            color: rgb(253, 174, 137);
+        }
+
+        .blog-entry .heading {
+            color: #000;
+            font-size: 20px;
+            line-height: 1.5em;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+        }
+
+        .list-unstyled .email {
+            color: #fff;
+        }
+
+        .list-unstyled img {
+            width: 40px;
+            margin: 5px;
+        }
+
+        .list-unstyled img:hover {
+            opacity: .9;
+        }
+
+        @media screen and (max-width: 991px) {
+            .lg-none {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar-collapse .nav-item {
+                text-align: center;
+                padding: 0.5rem 0;
+            }
+
+            .navbar-collapse .nav-link {
+                width: 100%;
+            }
+
+            .carousel-inner img {
+                width: 100%;
+                height: calc(100vh - 56px);
+                object-fit: cover;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div id="goTop">˄</div>
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light dropDowns">
 
         <a class="navbar-brand" href="index.html">Lift 共享空間</a>
 
@@ -214,27 +258,28 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>  
+        </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/banner1.jpg" alt="" >
+                <img src="images/banner1.jpg" alt="">
                 <div class="carousel-caption d-flex justify-content-center align-items-center">
-                <h1>LIFE</h1>
-                <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
+                    <h1>LIFE</h1>
+                    <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/banner2.jpg" alt="">
                 <div class="carousel-caption d-flex justify-content-center align-items-center">
-                <h1>LIFE</h1>
-                <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
+                    <h1>LIFE</h1>
+                    <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/banner3.jpg" alt="">
-                <div class="carousel-caption d-flex justify-content-center align-items-center" style="color: rgb(0, 0, 0);">
-                <h1>LIFE</h1>
-                <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
+                <div class="carousel-caption d-flex justify-content-center align-items-center"
+                    style="color: rgb(0, 0, 0);">
+                    <h1>LIFE</h1>
+                    <p>成長最愛的 Co-Working Space 共同工作空間、小型辦公室與活動空間</p>
                 </div>
             </div>
         </div>
@@ -250,67 +295,73 @@
     <section class="bg-color pl-2 pr-2">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600" data-aos-offset="80" data-aos-once="true">
+                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600"
+                    data-aos-offset="80" data-aos-once="true">
                     <div class="title-icon rounded-circle d-flex align-items-center justify-content-center">
                         <img src="images/3d.svg" alt="" width="50" height="50">
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">獨立包廂</h3>
                         <p>
-                        Life共享空間的空間皆是獨立進出的包廂，安靜不受打擾，不必擔心有別人在旁進進出出。
+                            Life共享空間的空間皆是獨立進出的包廂，安靜不受打擾，不必擔心有別人在旁進進出出。
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600" data-aos-offset="80" data-aos-once="true">
+                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600"
+                    data-aos-offset="80" data-aos-once="true">
                     <div class="title-icon rounded-circle d-flex align-items-center justify-content-center">
                         <img src="images/key.svg" alt="" width="50" height="50">
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">保密空間</h3>
                         <p>
-                        Life共享空間的每個空間皆有提供專屬密碼，不需擔心被隨便入侵或打擾。
+                            Life共享空間的每個空間皆有提供專屬密碼，不需擔心被隨便入侵或打擾。
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600" data-aos-offset="80" data-aos-once="true">
+                <div class="col-md-4 col-sm-12 col-12 mt-5" data-aos="fade-right" data-aos-duration="600"
+                    data-aos-offset="80" data-aos-once="true" id="AAA">
                     <div class="title-icon rounded-circle d-flex align-items-center justify-content-center">
                         <img src="images/coin.svg" alt="" width="50" height="50">
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">親民價格</h3>
                         <p>
-                        Life共享空間除了價格親民外，空間的設計也下了一番苦工，你會驚豔這樣的價格居然能找到如此有質感的空間。
+                            Life共享空間除了價格親民外，空間的設計也下了一番苦工，你會驚豔這樣的價格居然能找到如此有質感的空間。
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="about pl-2 pr-2" id="AAA">
+    <section class="about pl-2 pr-2">
         <div class="container mt-5">
             <div class="row">
-                <div class="col-lg-5 p-lg-5 lg-none" style="background:url(images/about.jpg) no-repeat center top; background-size:cover;">
+                <div class="col-lg-5 p-lg-5 lg-none"
+                    style="background:url(images/about.jpg) no-repeat center top; background-size:cover;">
 
                 </div>
-                <div class="col-lg-7 col-sm-12 col-12 pt-3" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200" data-aos-once="true">
+                <div class="col-lg-7 col-sm-12 col-12 pt-3" data-aos="fade-right" data-aos-duration="600"
+                    data-aos-offset="200" data-aos-once="true">
                     <div>
                         <h2 class="pl-lg-5 ml-lg-5 mb-4">關於我們</h2>
-                    </div>      
-                    <div class="pl-lg-5 ml-lg-5 mb-5 pt-lg-4 text-justify">      
+                    </div>
+                    <div class="pl-lg-5 ml-lg-5 mb-5 pt-lg-4 text-justify">
                         <p>Life共享空間，是您舒適的教室、會議、聚會、攝影場地。
-                        在家工作容易散漫懶惰?商辦的空間擁擠狹小令人喘不過氣?咖啡廳一位難求且總是吵雜不堪?
-                        那Life共享空間是您的好選擇。
-                        </p>      
+                            在家工作容易散漫懶惰?商辦的空間擁擠狹小令人喘不過氣?咖啡廳一位難求且總是吵雜不堪?
+                            那Life共享空間是您的好選擇。
+                        </p>
                         <p>全部空間任您選擇，每月只要 $ 3,990把整個世界都變成你的辦公室！
-                        希望您在專屬包廂，度過美好的時光！
-                        </p>     
-                        <p><a href="#" class="btn-custom">Learn More <span></span></a></p>        
-                     </div>
+                            希望您在專屬包廂，度過美好的時光！
+                        </p>
+                        <p><a href="#" class="btn-custom">Learn More <span></span></a></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-counter" style="background:url(images/bg_0.jpg) no-repeat 50% 10%;background-attachment: fixed;">
+    <section class="section-counter"
+        style="background:url(images/bg_0.jpg) no-repeat 50% 10%;background-attachment: fixed;">
         <div class="container counter-bg p-5">
             <div class="row d-md-flex align-items-center">
                 <div class="col-lg-12">
@@ -325,7 +376,7 @@
                         </div>
                         <div class="col-md text-center">
                             <strong class="d-block">73%</strong>
-                            <span>縣市覆蓋率</span>
+                            <span id="BBB">縣市覆蓋率</span>
                         </div>
                         <div class="col-md text-center">
                             <strong class="d-block">35</strong>
@@ -336,16 +387,17 @@
             </div>
         </div>
     </section>
-    <section class="project" id="BBB">
+    <section class="project">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-7 mb-3 pl-4 pr-4" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200" data-aos-once="true">
+                <div class="col-md-7 mb-3 pl-4 pr-4" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200"
+                    data-aos-once="true">
                     <h2 class="mb-4">我們的空間</h2>
                     <p>提供您舒適、高品質的活動空間，希望您能享受著每一刻！</p>
                 </div>
             </div>
         </div>
-        <div class="container-fluid" >
+        <div class="container-fluid">
             <div class="row no-gutters" style="margin: 0 -15px 0 -15px;">
                 <div class="col-md-6 col-lg-3">
                     <div class="priject-img">
@@ -374,17 +426,19 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="priject-img">
                         <img src="images/room-4.jpg" alt="" class="img-fluid">
+                        <div class="ccc" id="CCC"></div>
                     </div>
                     <div class="text">
                         <h3>個人辦公空間</h3>
                     </div>
                 </div>
-            </div>    
+            </div>
         </div>
     </section>
-    <section class="blog py-3 pl-3 pr-3" id="CCC">
+    <section class="blog py-3 pl-3 pr-3">
         <div class="container">
-            <div class="row justify-content-center" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200" data-aos-once="true">
+            <div class="row justify-content-center" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200"
+                data-aos-once="true">
                 <div class="col-md-7 mb-3">
                     <h2 class="mb-4">近期活動</h2>
                     <p>Life共享空間遍佈各大城市，提供會員社群彼此交流成長的機會，且定期舉辦各式課程和網路交際等等的聚會活動，為您拓展人脈、建立網絡。</p>
@@ -393,7 +447,8 @@
             <div class="row" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200" data-aos-once="true">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="blog-entry d-flex align-items-center flex-column">
-                        <a href="#" class="bg" style="background: url(images/img_1.jpg) no-repeat center center;background-size: contain">
+                        <a href="#" class="bg"
+                            style="background: url(images/img_1.jpg) no-repeat center center;background-size: contain">
                         </a>
                         <div class="d-flex py-4">
                             <div class="meta mb-3 text-right">
@@ -409,7 +464,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="blog-entry d-flex align-items-center flex-column">
-                        <a href="#" class="bg" style="background: url(images/img_2.jpg) no-repeat center center;background-size: contain">
+                        <a href="#" class="bg"
+                            style="background: url(images/img_2.jpg) no-repeat center center;background-size: contain">
                         </a>
                         <div class="d-flex py-4">
                             <div class="meta mb-3 text-right">
@@ -425,7 +481,8 @@
                 </div>
                 <div class="col-lg-4 d-lg-block d-md-none col-12">
                     <div class="blog-entry d-flex align-items-center flex-column">
-                        <a href="#" class="bg" style="background: url(images/img_3.jpg) no-repeat center center;background-size: contain">
+                        <a href="#" class="bg"
+                            style="background: url(images/img_3.jpg) no-repeat center center;background-size: contain">
                         </a>
                         <div class="d-flex py-4">
                             <div class="meta mb-3 text-right">
@@ -441,7 +498,7 @@
                 </div>
             </div>
         </div>
-    </section>   
+    </section>
     <footer class="pl-5 pr-5" id="DDD">
         <div class="container">
             <div class="row py-5">
@@ -464,7 +521,7 @@
                 <div class="col-md-4 mt-3">
                     <h5>Follow Us</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://www.facebook.com/"><img src="images/facebook.svg" alt=""/></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="" /></a></li>
                     </ul>
                 </div>
             </div>
@@ -476,51 +533,69 @@
                 </div>
             </div>
         </div>
-    </footer>   
+    </footer>
     <script src="bootstrap/lib/jquery-3.4.1.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="aos-master/dist/aos.js"></script>
     <script>
-            AOS.init();
+        AOS.init();
 
-            $('#M01').click(function(event){
-                var YY=$("#AAA").offset().top;
-                $("html,body").stop(true,false).animate({scrollTop:YY},1000);
-                event.preventDefault();
-            });           
-            $('#M02').click(function(event){
-                var YY=$("#BBB").offset().top;
-                $("html,body").stop(true,false).animate({scrollTop:YY},1000);
-                event.preventDefault();
-            });    
-            $('#M03').click(function(event){
-                var YY=$("#CCC").offset().top;
-                $("html,body").stop(true,false).animate({scrollTop:YY},1000);
-                event.preventDefault();
-            });  
-            $('#M04').click(function(event){
-                var YY=$("#DDD").offset().top;
-                $("html,body").stop(true,false).animate({scrollTop:YY},1000);
-                event.preventDefault();
-            });
-            
-            $('#goTop').click(function() {
+        $('#M01').click(function (event) {
+            var YY = $("#AAA").offset().top;
+            $("html,body").stop(true, false).animate({ scrollTop: YY }, 1000);
+            event.preventDefault();
+        });
+        $('#M02').click(function (event) {
+            var YY = $("#BBB").offset().top;
+            $("html,body").stop(true, false).animate({ scrollTop: YY }, 1000);
+            event.preventDefault();
+        });
+        $('#M03').click(function (event) {
+            var YY = $("#CCC").offset().top;
+            $("html,body").stop(true, false).animate({ scrollTop: YY }, 1000);
+            event.preventDefault();
+        });
+        $('#M04').click(function (event) {
+            var YY = $("#DDD").offset().top;
+            $("html,body").stop(true, false).animate({ scrollTop: YY }, 1000);
+            event.preventDefault();
+        });
+
+        $('#goTop').click(function () {
             $('html,body').animate(
                 {
-                scrollTop: 0,
+                    scrollTop: 0,
                 },
                 1000
             )
-            })
-            $(window).scroll(function() {
+        })
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
                 $('#goTop').fadeIn('fast')
             } else {
                 $('#goTop')
-                .stop()
-                .fadeOut('fast')
+                    .stop()
+                    .fadeOut('fast')
             }
-            })
-    </script>   
+        })
+
+        $(window).scroll(function () {
+            var HH = $(window).scrollTop();
+            if (HH > 60) {                               //要滑動到選單的距離 
+                $('.dropDowns').addClass('navFixed');    // 幫選單加上固定效果
+            } else {
+                $('.dropDowns').removeClass('navFixed'); //移除選單固定效果
+            }
+        });
+
+        $(function () {
+            if ($(window).width() < 768) { //當視窗小於768時才運作
+                $('.navbar a').on('click', function () {
+                    $('.navbar-toggler').click();
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
