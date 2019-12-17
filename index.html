@@ -32,6 +32,7 @@
             color: #fff;
         }
 
+        /* --- navbar --- */
         .navFixed {
             z-index: 20;
             position: fixed;
@@ -39,6 +40,7 @@
             left: 0;
             background: #fff;
             min-width: 100%;
+            box-shadow: 0 1px 2px 2px #ccc;
             transition: opacity .5s ease-out;
         }
 
@@ -47,6 +49,7 @@
             font-size: 1.5rem;
         }
 
+        /* --- carousel --- */
         .carousel-fade .carousel-inner .item,
 
         .carousel-fade .carousel-inner .active.left,
@@ -54,7 +57,6 @@
         .carousel-fade .carousel-inner .active.right {
             opacity: 0;
         }
-
         .carousel-fade .carousel-inner .active,
 
         .carousel-fade .carousel-inner .next.left,
@@ -62,7 +64,6 @@
         .carousel-fade .carousel-inner .prev.right {
             opacity: 1;
         }
-
         .carousel-fade .carousel-inner .next,
 
         .carousel-fade .carousel-inner .prev,
@@ -73,7 +74,6 @@
             left: 0;
             transform: translate3d(0, 0, 0);
         }
-
         .carousel-fade .carousel-control {
             z-index: 2;
         }
@@ -81,40 +81,37 @@
         .carousel-caption h1 {
             font-size: 4rem;
         }
-
         .carousel-caption p {
             font-weight: 600;
             font-size: 1.3rem;
         }
-
         .carousel-inner img {
             width: 100%;
             height: 100%;
         }
 
+        /* --- Features --- */
         .bg-color {
             background: rgb(253, 241, 236);
             padding-bottom: 2.5em;
         }
-
         .title-icon {
             width: 100px;
             height: 100px;
             background: rgb(253, 174, 137);
         }
-
         .btn-custom {
             color: rgb(253, 174, 137);
             font-weight: 500;
             border-bottom: 2px solid rgb(253, 174, 137);
         }
-
         .btn-custom:hover {
             color: rgb(253, 143, 92);
             border-bottom: 2px solid rgb(253, 143, 92);
             text-decoration: none;
         }
-
+        
+        /* --- counter --- */
         .section-counter {
             color: #fff;
             padding: 6em 0;
@@ -134,16 +131,16 @@
             font-size: 40px;
             font-weight: 700;
         }
-
+        /* --- product --- */
         .project {
             padding: 6em 0;
         }
-        .priject-img {
+        .project-img {
             position: relative;
         }
-        .priject-img .ccc{
+        .project-img .ccc{
             position: absolute;
-            top: 40%;
+            top: 45%;
         }
         .text h3 {
             font-size: 1.75rem;
@@ -159,7 +156,8 @@
             font-weight: 500;
         }
 
-        .blog-entry .bg {
+        /* activity */
+        .activity-entry .bg {
             display: block;
             position: relative;
             width: 266px;
@@ -176,12 +174,13 @@
             color: rgb(253, 174, 137);
         }
 
-        .blog-entry .heading {
+        .activity-entry .heading {
             color: #000;
             font-size: 20px;
             line-height: 1.5em;
         }
 
+        /* footer */
         footer {
             background: #000;
             color: #fff;
@@ -334,7 +333,7 @@
             </div>
         </div>
     </section>
-    <section class="about pl-2 pr-2">
+    <section class="pl-2 pr-2">
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-5 p-lg-5 lg-none"
@@ -400,7 +399,7 @@
         <div class="container-fluid">
             <div class="row no-gutters" style="margin: 0 -15px 0 -15px;">
                 <div class="col-md-6 col-lg-3">
-                    <div class="priject-img">
+                    <div class="project-img">
                         <img src="images/room-1.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="text">
@@ -408,7 +407,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="priject-img">
+                    <div class="project-img">
                         <img src="images/room-2.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="text">
@@ -416,7 +415,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="priject-img">
+                    <div class="project-img">
                         <img src="images/room-3.jpg" alt="" class="img-fluid">
                     </div>
                     <div class="text">
@@ -424,7 +423,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="priject-img">
+                    <div class="project-img">
                         <img src="images/room-4.jpg" alt="" class="img-fluid">
                         <div class="ccc" id="CCC"></div>
                     </div>
@@ -435,7 +434,7 @@
             </div>
         </div>
     </section>
-    <section class="blog py-3 pl-3 pr-3">
+    <section class="activity py-3 pl-3 pr-3">
         <div class="container">
             <div class="row justify-content-center" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200"
                 data-aos-once="true">
@@ -446,7 +445,7 @@
             </div>
             <div class="row" data-aos="fade-right" data-aos-duration="600" data-aos-offset="200" data-aos-once="true">
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-entry d-flex align-items-center flex-column">
+                    <div class="activity-entry d-flex align-items-center flex-column">
                         <a href="#" class="bg"
                             style="background: url(images/img_1.jpg) no-repeat center center;background-size: contain">
                         </a>
@@ -463,7 +462,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <div class="blog-entry d-flex align-items-center flex-column">
+                    <div class="activity-entry d-flex align-items-center flex-column">
                         <a href="#" class="bg"
                             style="background: url(images/img_2.jpg) no-repeat center center;background-size: contain">
                         </a>
@@ -480,10 +479,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 d-lg-block d-md-none col-12">
-                    <div class="blog-entry d-flex align-items-center flex-column">
+                    <div class="activity-entry d-flex align-items-center flex-column">
                         <a href="#" class="bg"
                             style="background: url(images/img_3.jpg) no-repeat center center;background-size: contain">
                         </a>
+                        <!-- <img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px"> -->
                         <div class="d-flex py-4">
                             <div class="meta mb-3 text-right">
                                 <div>Sep. 28, 2019</div>
@@ -502,7 +502,7 @@
     <footer class="pl-5 pr-5" id="DDD">
         <div class="container">
             <div class="row py-5">
-                <div class="col-md-4 mt-3">
+                <div class="col-md-4 mt-3 d-md-flex justify-content-md-center">
                     <ul class="list-unstyled">
                         <h5>Global Travelers</h5>
                         <h5>Team Building</h5>
@@ -510,17 +510,17 @@
                         <h5>Coaching</h5>
                     </ul>
                 </div>
-                <div class="col-md-4 mt-3">
-                    <h5>Contact Us</h5>
+                <div class="col-md-4 mt-3 d-md-flex justify-content-md-center"> 
                     <ul class="list-unstyled">
+                        <h5>Contact Us</h5>
                         <li>Life空間企業股份有限公司</li>
                         <li>Tel：0912-345678</li>
                         <li><a href="mailto:space_life@gmail.com" class="email">Email：space_life@gmail.com</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mt-3">
-                    <h5>Follow Us</h5>
+                <div class="col-md-4 mt-3 d-md-flex justify-content-md-center">
                     <ul class="list-unstyled">
+                        <h5>Follow Us</h5>
                         <li><a href="https://www.facebook.com/"><img src="images/facebook.svg" alt="" /></a></li>
                     </ul>
                 </div>
@@ -581,7 +581,7 @@
 
         $(window).scroll(function () {
             var HH = $(window).scrollTop();
-            if (HH > 60) {                               //要滑動到選單的距離 
+            if (HH > 65) {                               //要滑動到選單的距離 
                 $('.dropDowns').addClass('navFixed');    // 幫選單加上固定效果
             } else {
                 $('.dropDowns').removeClass('navFixed'); //移除選單固定效果
