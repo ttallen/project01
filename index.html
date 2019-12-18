@@ -14,22 +14,21 @@
         #goTop {
             display: none;
             position: fixed;
-            border-radius: 50%;
             right: 20px;
             bottom: 20px;
-            width: 50px;
-            height: 50px;
-            padding: 4px 0 0 18px;
             font-size: 25px;
-            background: rgb(253, 174, 137);
+            background: rgba(253, 174, 137, 0.75);
             color: #fff;
             cursor: pointer;
             z-index: 20;
         }
-
         #goTop:hover {
-            background: rgb(253, 162, 119);
+            background: rgba(253, 174, 137);
             color: #fff;
+        }
+        #goTop img {
+            width: 25px;
+            margin: 10px 10px;
         }
 
         /* --- navbar --- */
@@ -327,18 +326,26 @@
 
             .carousel-inner img {
                 width: 100%;
-                height: calc(100vh - 56px);
+                height: calc(55vh - 56px);
                 object-fit: cover;
+            }
+
+            .carousel-caption h1 {
+            font-size: 3rem;
+            }
+            
+            .carousel-indicators li {
+                display: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="goTop">˄</div>
+    <div id="goTop"><img src="images/up.svg"></div>
     <nav class="navbar navbar-expand-md navbar-light dropDowns">
 
-        <a class="navbar-brand" href="index.html">Lift 共享空間</a>
+        <a class="navbar-brand" href="https://life-space.000webhostapp.com/index.html">Lift 共享空間</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
