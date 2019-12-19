@@ -6426,6 +6426,8 @@ a.close.disabled {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
