@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="aos-master/dist/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        
-    </style>
 </head>
-
 <body>
     <div id="goTop"><img src="images/up.svg"></div>
     <nav class="navbar navbar-expand-md navbar-light dropDowns">
@@ -390,18 +385,16 @@
         })
 
         //---navbar-fixed---
-        if ($(window).width() > 768) {
-            $(window).scroll(function () {
+        $(window).scroll(function () {
             var HH = $(window).scrollTop();
-            if (HH > 65) {                               //要滑動到選單的距離 
+            var WW = $(window).width();
+            if (HH > 65 && WW > 768) {                   //要滑動到選單的距離 
                 $('.dropDowns').addClass('navFixed');    // 幫選單加上固定效果
             } else {
                 $('.dropDowns').removeClass('navFixed'); //移除選單固定效果
             }
         });
-        }
         
-
         //---漢堡包自動收回---
         $(function () {
             if ($(window).width() < 768) { //當視窗小於768時才運作
