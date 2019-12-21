@@ -18,13 +18,29 @@
     width: 25px;
     margin: 10px 10px;
 }
-
+/* ---bar--- */
+.bar {
+    background: rgb(253, 174, 137);
+    color: #fff;
+    padding: 10px;
+}
+.bar-none {
+   display: none !important;
+}
+.bar-p {
+    font-weight: 600;
+}
+.bar-close {
+    width: 14px;
+    cursor: pointer;
+}
 /* --- navbar --- */
 .navFixed {
     z-index: 20;
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     background: #fff;
     min-width: 100%;
     box-shadow: 0 1px 1px 1px #ddd;
@@ -209,12 +225,6 @@
 }
 /* end */
 
-.activity-entry .bg {
-    display: block;
-    position: relative;
-    width: 266px;
-    height: 275px;
-}
 .meta {
     display: block;
     width: 260px;
@@ -253,6 +263,9 @@ footer {
     }
 }
 @media screen and (max-width: 768px) {
+    .bar {
+        padding: 15px;
+    }
     .navbar-collapse .nav-item {
         text-align: center;
         padding: 0.5rem 0;
