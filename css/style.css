@@ -48,7 +48,7 @@
 }
 .navbar-brand {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 /* --- carousel --- */
@@ -73,6 +73,9 @@
     width: 100px;
     height: 100px;
     background: rgb(253, 174, 137);
+}
+.media-body {
+    text-align: center;
 }
 /* .btn-custom {
     color: rgb(253, 174, 137);
@@ -112,7 +115,7 @@
 }
 .project-img .ccc {
     position: absolute;
-    top: 40%;
+    top: 53%;
 }
 .text h3 {
     font-size: 1.75rem;
