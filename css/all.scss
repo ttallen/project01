@@ -58,21 +58,36 @@ $body_color: #FDAE89;
 // --- carousel ---
 .carousel-inner {
 
-    img {
-        width: 100%;
-        height: 100%;
-    }
+    .carousel-item {
 
-    .carousel-caption {
-
-        h1 {
-            font-size: 4rem;
+        &::after {
+            content:"";
+            display:block;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background:#000;
+            opacity: 0.3;
         }
-        p {
-            font-weight: 600;
-            font-size: 1.3rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-caption {
+
+            h1 {
+                font-size: 4rem;
+            }
+            p {
+                font-weight: 600;
+                font-size: 1.3rem;
+            }
         }
     }
+    
 }
 // --- Features ---
 .bg-color {
@@ -92,6 +107,8 @@ $body_color: #FDAE89;
 .section-counter {
     color: #fff;
     padding: 6em 0;
+    background:url(../images/bg_0.jpg) no-repeat 50% 10%;
+    background-attachment: fixed;
 
     .counter-bg {
         display: block;
@@ -127,6 +144,7 @@ $body_color: #FDAE89;
         h3 {
             font-size: 1.75rem;
             color: #fff;
+            text-shadow: #A0A0A0 0.1em 0.1em 0.1em;
             position: absolute;
             top: 0;
             left: 0;
@@ -323,16 +341,21 @@ footer {
     }
     .carousel-inner {
 
-        img {
-            width: 100%;
-            height: calc(55vh - 56px);
-            object-fit: cover;
-        }
-        .carousel-caption {
+        .carousel-item {
 
-            h1 {
-                font-size: 3rem;
-                }
+            img {
+                width: 100%;
+                height: calc(55vh - 56px);
+                object-fit: cover;
+            }
+            .carousel-caption {
+
+                h1 {
+                    font-size: 3rem;
+                    }
+            }
         }
+
+        
     }
 }
